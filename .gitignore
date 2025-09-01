@@ -2,4 +2,4 @@
 INSTRUCTION.md
 *.bib
 __pycache__
-
+.vc_state.json

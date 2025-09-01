@@ -267,23 +267,10 @@ def export(
 
 
 @app.command()
-def status() -> None:
-    """Show current session status."""
-    state = load_state()
-    
-    console.print(f"[blue]Current bibliography: {state.get('current_bib', 'None')}[/blue]")
-    console.print(f"[blue]Vibes added: {len(state['vibes'])}[/blue]")
-    
-    processed = sum(1 for vibe in state["vibes"] if vibe["results"])
-    console.print(f"[blue]Searches completed: {processed}/{len(state['vibes'])}[/blue]")
-
-
-@app.command()
 def ls() -> None:
     """Show currently recorded status."""
     state = load_state()
     
-    console.print("[bold]Parsed Results:[/bold]")
     if not state["vibes"]:
         console.print("[yellow]No vibes recorded[/yellow]")
         return
