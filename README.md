@@ -1,6 +1,10 @@
 # vibecite
 
-A minimal CLI that turns natural-language paper descriptions into curated citations by delegating to Claude Code for search and formatting.
+A minimal CLI that turns natural-language paper descriptions into curated citations (bibtex format) by delegating search and formatting to Claude Code.
+
+<div align="center">
+<img src="demo.png" alt="vibecite demo" width="100%">
+</div>
 
 ## Installation
 
@@ -31,10 +35,13 @@ vc init --bib refs.bib
 # Add paper descriptions ("vibes") using the -- syntax
 vc add -- jinuk kim icml 2025 llm quantization paper
 
+# (Optional) List current session status
+vc ls
+
 # Search for papers (delegates to Claude Code with progress feedback)
 vc search
 
-# List current session status
+# (Optional) Check the results
 vc ls
 
 # Export to BibTeX
